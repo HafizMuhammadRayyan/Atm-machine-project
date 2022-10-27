@@ -70,12 +70,16 @@ const withdraw = () => {
     }
     else {
 
-        document.querySelector("#errMessage2").innerHTML = ``
+        document.querySelector("#errMessage2").innerHTML = `Withdraw has been Done successfully 🎉`
         moneyBox = moneyBox - withdrawAmount;
         cardDailyLimit = cardDailyLimit - withdrawAmount;
         accountBalance = accountBalance - withdrawAmount;
-        
+
         console.log(moneyBox, cardDailyLimit, accountBalance);
+        
+        document.getElementById("moneyBox").innerHTML = moneyBox;
+        document.getElementById("cardDailyLimit").innerHTML = cardDailyLimit;
+        document.getElementById("accountBalance").innerHTML = accountBalance;
         return;
     }
 
