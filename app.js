@@ -14,11 +14,11 @@ const checkPin = () => {
     console.log("Pin is ", userPin);
 
     if (userPin.length < 6) {
-        document.querySelector("#errMessage").innerHTML = `you must enter 4 digit pin number`;
+        document.querySelector("#errMessage").innerHTML = `you must enter 6 digit pin number`;
         // return;
     }
     else if (userPin.length > 6) {
-        document.querySelector("#errMessage").innerHTML = `you must enter 4 digit pin number`;
+        document.querySelector("#errMessage").innerHTML = `you must enter 6 digit pin number`;
         // return;
     }
     else if (userPin === "112233") {
@@ -71,6 +71,7 @@ const withdraw = () => {
     else {
 
         document.querySelector("#errMessage2").innerHTML = `Withdraw has been Done successfully 🎉`
+        
         moneyBox = moneyBox - withdrawAmount;
         cardDailyLimit = cardDailyLimit - withdrawAmount;
         accountBalance = accountBalance - withdrawAmount;
